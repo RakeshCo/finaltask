@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+// src/App.jsx
+
+import React from 'react';
+import Navbar from './components/Navbar';
+
+import Sidebar from './components/Sidebar';
+// Uncomment the following line to import Home component
+import Home from './components/Home';
+import About from './components/About';
+import Service from './components/service';
+import ContactUs from './components/contactus';
 import './App.css';
 
-function App() {
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* Uncomment the following line to render the Home component */}
+     
+      <Navbar />
+      <Sidebar />
+      <Home />
+
+      <About />
+      <Service />
+      <ContactUs />
+
+      {/* Uncomment the following line to render the Service component */}
+     
+      {/* You can add more components here as needed */}
+      {/* <Profile /> */}
+      {/* <Settings /> */}
     </div>
   );
-}
+};
 
 export default App;
+
+
